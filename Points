@@ -1,11 +1,14 @@
 public class points {
-  public int points = 0;
+  private int points = 0;
   if (word.length == 4){
     points = points + 5;
   } else if (word.length == 5){
     points = points + 10;
   } else if (word.length == 6){
     points = points + 15;
+  }
+  public int Getpoints(){
+    return points;
   }
   System.out.println("You have " + points + "currently.");
 }
