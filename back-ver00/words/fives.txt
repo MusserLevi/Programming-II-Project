@@ -132,7 +132,6 @@ horde
 hovel
 human
 ideal
-ignite
 imply
 index
 infer
@@ -141,19 +140,15 @@ input
 inset
 issue
 ivory
-jargon
 joint
 judge
 kneel
 laden
 lapse
-latent
-lavish
 legal
 legit
 level
 limbo
-linger
 lucid
 lunar
 lyric
