@@ -1,5 +1,3 @@
-//This is the project folder, making anagrams. Using the database on Github.
 /*We need to make the website, the program to read the text file, scramble the words, and check it with the original word read, 
 save used words to an array, clear the past words array, "give up" button, rank it by the amount of letters in a word.
-*/
-//Possibilities: Changing the difficulty of the word for more or less points, measuring the time to unscramble it.
+Possibilities: Measuring the time to unscramble it. */
