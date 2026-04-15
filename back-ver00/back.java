@@ -21,11 +21,17 @@ public class Points {
     public int getPoints() {
         return points;
     }
-    public void printPoints() {
+    public void printCurrentPoints() {
         System.out.println("You have " + points + " points currently.");
+    }
+    @Override
+    public String toString() {
+        return "Word: " + word + "Points: " + points;
     }
 }
 public class back {
+    private int TotalScore = 0;
+    private points CurrentPoints;
     public String[] fours;
     public String[] fives;
     public String[] sixes;
@@ -49,6 +55,8 @@ public class back {
         else if(len==2){out=this.fives[rand.nextInt(0,fives.length)];}
         else if(len==3){out=this.sixes[rand.nextInt(0,sixes.length)];}
         return out;
+        CurrentPoints = new Points(word);
+        return word;
     }
     public String ScrambleWord(String word){
         String out=new String();String temp=word;
@@ -62,8 +70,14 @@ public class back {
     public int guessWord(String guess,String word){
         int out=0;
         if(guess!=word){Guesses.add(guess);}
-        else if(guess==word){Guesses.clear();out=1;}
+        else if {
+            (guess==word){Guesses.clear();out=1;}
+            TotalScore += CurrentPoints.getPoints();
         return out;
+        }
+    }
+    public void printTotalScore() {
+        System.out.println("Total Score = " + TotalScore);
     }
     public static void main(String[] args){
         back b = new back()
