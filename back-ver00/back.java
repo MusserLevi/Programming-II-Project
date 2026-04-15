@@ -41,7 +41,8 @@ public class back {
         else if(guess==word){Guesses.clear();out=1;}
         return out;
     }
-    public void main(){
-        setup();
+    public static void main(String[] args){
+        back b = new back()
+        b.setup();
     }
 }
