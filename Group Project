@@ -1,6 +1,9 @@
 /*We need to make the website, the program to read the text file, scramble the words, and check it with the original word read, 
 save used words to an array, clear the past words array, "give up" button, rank it by the amount of letters in a word.
 Possibilities: Measuring the time to unscramble it. */
-import java.io.IOException;import java.nio.file.*;
+import java.io.IOException;
+import java.nio.file.*;
 import java.util.Random;
-import java.util.List;import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
+import words.back;
