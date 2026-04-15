@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Points {
     private int points = 0;
     private String word;
-    public points(String word) {
+    public Points(String word) {
         this.word = word;
         calculatePoints();
     }
@@ -54,9 +54,9 @@ public class back {
         if(len==1){out=this.fours[rand.nextInt(0,fours.length)];}
         else if(len==2){out=this.fives[rand.nextInt(0,fives.length)];}
         else if(len==3){out=this.sixes[rand.nextInt(0,sixes.length)];}
-        return out;
         CurrentPoints = new Points(word);
         return word;
+        return out;
     }
     public String ScrambleWord(String word){
         String out=new String();String temp=word;
@@ -69,18 +69,20 @@ public class back {
     }
     public int guessWord(String guess,String word){
         int out=0;
-        if(guess!=word){Guesses.add(guess);}
-        else if {
-            (guess==word){Guesses.clear();out=1;}
+        if(!guess.equals(word))
+        {Guesses.add(guess);
+        } else {
+            Guesses.clear();
+            out=1;
             TotalScore += CurrentPoints.getPoints();
-        return out;
         }
+        return out;
     }
     public void printTotalScore() {
         System.out.println("Total Score = " + TotalScore);
     }
     public static void main(String[] args){
-        back b = new back()
+        back b = new back();
         b.setup();
     }
 }
