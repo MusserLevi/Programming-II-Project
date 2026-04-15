@@ -30,6 +30,7 @@ public class Points {
     }
 }
 public class back {
+    private String currentWord;
     private int TotalScore = 0;
     private Points CurrentPoints;
     public String[] fours;
@@ -50,17 +51,16 @@ public class back {
     }
     
     public String getWord(int len){
-        String out=new String();
         if(len==1){
-            word=this.fours[rand.nextInt(0,fours.length)];
+            currentWord=this.fours[rand.nextInt(0,fours.length)];
         } else if(len==2){
-            word=this.fives[rand.nextInt(0,fives.length)];
+            currentWord=this.fives[rand.nextInt(0,fives.length)];
         } else if(len==3){
-            word=this.sixes[rand.nextInt(0,sixes.length)];
+            currentWord=this.sixes[rand.nextInt(0,sixes.length)];
         }
-        CurrentPoints = new Points(word);
+        CurrentPoints = new Points(currentWord);
         
-        return word;
+        return currentWord;
     }
     public String ScrambleWord(String word){
         String out=new String();String temp=word;
