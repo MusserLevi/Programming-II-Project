@@ -3,7 +3,7 @@ import java.nio.file.*;
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
-public class points {
+public class Points {
     private int points = 0;
     private String word;
     public points(String word) {
@@ -11,14 +11,12 @@ public class points {
         calculatePoints();
     }
     private void calculatePoints() {
-        int length = word.length();
-        if (length == 4) {
-            points += 5;
-        } else if (length == 5) {
-            points += 10;
-        } else if (length == 6) {
-            points += 15;
-        }
+        points = switch(word.length()){
+            case 4 -> 5;
+            case 5 -> 10;
+            case 6 -> 15;
+            default -> 0;
+        };
     }
     public int getPoints() {
         return points;
