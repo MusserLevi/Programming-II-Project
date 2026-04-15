@@ -1,6 +1,32 @@
-import java.io.IOException;import java.nio.file.*;
+import java.io.IOException;
+import java.nio.file.*;
 import java.util.Random;
-import java.util.List;import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
+public class points {
+    private int points = 0;
+    private String word;
+    public points(String word) {
+        this.word = word;
+        calculatePoints();
+    }
+    private void calculatePoints() {
+        int length = word.length();
+        if (length == 4) {
+            points += 5;
+        } else if (length == 5) {
+            points += 10;
+        } else if (length == 6) {
+            points += 15;
+        }
+    }
+    public int getPoints() {
+        return points;
+    }
+    public void printPoints() {
+        System.out.println("You have " + points + " points currently.");
+    }
+}
 public class back {
     public String[] fours;
     public String[] fives;
