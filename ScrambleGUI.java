@@ -131,11 +131,7 @@ public class ScrambleGUI extends JFrame {
         if (result == 1) {
             messageLabel.setText("Correct! +Points");
             messageLabel.setForeground(new Color(0, 150, 0)); // Dark green
-            // Update the score display directly by reflecting backend data
-            // To be precise, since TotalScore is private in 'back', we would ideally use a getter. 
-            // Assuming we just append "Points" class points visually. 
-            // Note: Add a getTotalScore() to your back.java for accurate pulling, 
-            // or we just trust the visual update here.
+            
             scoreLabel.setText("Correct Answer Logged!"); 
             startNewRound();
         } else {
